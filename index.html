@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Erogdic</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- The "world" is the shirt print at its natural pixel size.
+       Everything inside it is positioned in image pixels, and the whole
+       world is moved/scaled with a CSS transform to frame each view. -->
+  <div id="world">
+    <img id="print" src="assets/shirt_print_restored.png" alt="" draggable="false">
+    <div id="overlays"></div>
+  </div>
+
+  <!-- Music: the browser plays the first source it can. Drop the file(s)
+       into audio/ with these names. If none exist, YouTube is used instead. -->
+  <audio id="track" preload="auto">
+    <source src="audio/The%20Doors%20-%20Light%20My%20Fire.webm" type="audio/webm">
+    <source src="audio/track.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Fallback music player (used while there's no real audio file). -->
+  <div id="yt-wrap"><div id="yt-player"></div></div>
+
+  <div id="hud" hidden></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
